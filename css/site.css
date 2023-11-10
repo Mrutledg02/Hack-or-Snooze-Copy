@@ -1,0 +1,174 @@
+/* General typography */
+
+body {
+  font-family: Arimo, sans-serif;
+  margin: 8px 7.5vw;
+  height: 100vh;
+  background-image: radial-gradient(circle, rgb(248, 188, 214) 0%, rgb(129, 177, 233) 100%);
+
+}
+
+h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Site layout */
+
+/* This is the basic box that the main part of the page goes into */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: #f6f6ef;
+  overflow-y: auto; /* Add this line to enable vertical scrolling */
+  max-height: calc(80vh - 16px);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Forms */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 18px 0;
+}
+
+form > * {
+  margin: 10px 0;
+}
+
+form label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-block;
+  width: 3.5rem;
+  text-align: left;
+  margin-right: 5px;
+}
+
+form input {
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  width: 100%;
+  box-shadow: 0 0 3px 1px lightgray;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 4px 1px darkgray;
+}
+
+form > button {
+  width: 4rem;
+  margin: 5px 0 15px 0px;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 0.85rem;
+  background-color: lightslategray;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+#edit-story-form button {
+  width: 6rem; /* Adjust the width as needed */
+  margin: 10px 0 20px 0; /* Adjust the margin as needed */
+  padding: 8px; /* Adjust the padding as needed */
+  font-size: 1rem; /* Adjust the font size as needed */
+  background-color: lightslategray; /* Adjust the background color as needed */
+  color: white; /* Adjust the text color as needed */
+}
+
+form > button:hover {
+  background-color: dimgray;
+}
+
+form > hr {
+  margin: 0;
+  border: 1px solid lightgray;
+}
+
+.login-input label {
+  width: 70px;
+}
+
+
+/* responsive queries for tightening things up for mobile. */
+
+@media screen and (max-width: 576px) {
+  body {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    max-width: 900px;
+    margin: 8px auto;
+  }
+}
+
+/* Add this style to your CSS file */
+#user-profile {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#profile-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#profile-form label {
+  margin-bottom: 8px;
+}
+
+#profile-form input {
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+#profile-form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#profile-form button:hover {
+  background-color: #45a049;
+}
